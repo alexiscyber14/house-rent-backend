@@ -66,3 +66,5 @@ gem "devise", "~> 4.9"
 gem "webpacker", "~> 5.4"
 
 gem "devise-jwt", "~> 0.11.0"
+
+gem "rspec-rails", "~> 6.0"
