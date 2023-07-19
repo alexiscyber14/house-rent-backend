@@ -20,4 +20,11 @@ RSpec.describe House, type: :model do
         expect(@house).not_to be_valid
       end
   end
+
+  describe 'associations' do
+    it 'should have many reservations' do
+      house_reservation = House.reflect_on_association(:reservations)
+      expect(house_reservation.macro).to eq(:has_many)
+    end
+  end
 end

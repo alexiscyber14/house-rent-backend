@@ -14,8 +14,8 @@ RSpec.describe User, type: :model do
 
   describe 'associations' do
     it 'should have many reservations' do
-      user_categories = User.reflect_on_association(:reservations)
-      expect(user_categories.macro).to eq(:has_many)
+      user_reservations = User.reflect_on_association(:reservations)
+      expect(user_reservations.macro).to eq(:has_many)
     end
   end
 end
