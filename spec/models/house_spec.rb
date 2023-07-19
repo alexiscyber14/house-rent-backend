@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe House, type: :model do
   before(:each) do
-    @house = House.create(name:'one-floor',area: 100,rental_fee: 1000)
+    @house = House.create(name: 'one-floor', area: 100, rental_fee: 1000)
   end
 
   describe 'validations' do
@@ -11,14 +11,14 @@ RSpec.describe House, type: :model do
     end
 
     it 'should not be vaild without name' do
-        @house.name = nil
-        expect(@house).not_to be_valid
-      end
+      @house.name = nil
+      expect(@house).not_to be_valid
+    end
 
-      it 'should not be vaild without rental fee' do
-        @house.rental_fee = nil
-        expect(@house).not_to be_valid
-      end
+    it 'should not be vaild without rental fee' do
+      @house.rental_fee = nil
+      expect(@house).not_to be_valid
+    end
   end
 
   describe 'associations' do
