@@ -11,14 +11,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def success_register
     render json: {
-        message: 'success',
-        user: current_user
+      message: 'success',
+      user: current_user
     }, status: :ok
   end
 
   def fail_register
     render json: {
-        message: "Something went wrong"
+      message: 'Something went wrong'
     }, status: :unprocessable_entity
   end
 end
