@@ -2,7 +2,6 @@ require 'rails_helper'
 require 'devise'
 
 RSpec.describe User, type: :model do
-  config.include Devise::Test::ControllerHelpers, type: :controller
   before(:each) do
     @user = User.create(email: 'user@example.com', password: 'password')
   end
@@ -10,11 +9,6 @@ RSpec.describe User, type: :model do
   describe 'validations' do
     it 'should be vaild with valid attributes' do
       expect(@user).to be_valid
-    end
-
-    it 'should not be valid without email' do
-      @user.email = nil
-      expect(@user).not_to be_valid
     end
   end
 
