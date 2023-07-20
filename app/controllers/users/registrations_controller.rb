@@ -12,13 +12,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def success_register
     render json: {
       message: 'success',
-      user: current_user
+      data: UserSerializer.new(current_user).serializable_hash[:data][:attributes]
     }, status: :ok
   end
 
   def fail_register
     render json: {
-      message: 'Something went wrong'
+      message: "User couldn't be created successfully. #{current_user.errors.full_messages.to_sentence}"
     }, status: :unprocessable_entity
   end
 end
