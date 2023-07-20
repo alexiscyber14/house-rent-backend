@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :jwt_authenticatable, jwt_revocation_strategy: JwtDenylist
 
   has_many :houses, dependent: :destroy
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
 
   enum role: %i[user admin]
 

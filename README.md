@@ -25,8 +25,64 @@ Things you may want to cover:
 
 INSTRUCTIONS ON CREATING A HOUSE, DELTEIING A HOUSE, VIEWING A SPECIFIC HOUSE
 
-  
- http://127.0.0.1:3001/api/v1/houses( create a house(post method), view all houses(get method))
+
+http://127.0.0.1:3001/sign_up (create a user(post method))
+Example below:
+{
+  "user": {
+    "name":"yosebbaf",
+    "email": "newssur@example.com",
+    "password": "password5050",
+    "password_confirmation": "password5050"
+  }
+}
+
+response below:
+{
+    "message": "success",
+    "data": {
+        "id": 4,
+        "email": "newssur@example.com",
+        "name": "yosebbaf",
+        "role": "user"
+    }
+}
+
+
+
+
+http://127.0.0.1:3001/sign_in (sign_in a user(post method))
+Example below: 
+{
+  "user": {
+    "email": "newur@example.com",
+    "password": "password12345"
+  }
+}
+response below: 
+{
+    "message": "Logged in successfully.",
+    "data": {
+        "user": {
+            "id": 3,
+            "name": "yosef",
+            "email": "newur@example.com",
+            "created_at": "2023-07-20T19:21:11.485Z",
+            "updated_at": "2023-07-20T19:21:11.485Z",
+            "role": "user"
+        }
+    }
+}
+
+
+
+
+
+
+
+ 
+
+http://127.0.0.1:3001/api/v1/houses( create a house(post method), view all houses(get method))
 Add a house json example below:
  {
    "house": {
@@ -97,5 +153,58 @@ example response belows:
     "image_url": "http://example.com/image.jpg",
     "user_id": 1
 }
+on delete;
+{
+    "message": "House was successfully deleted."
+}
 
+
+
+ http://127.0.0.1:3001/api/v1/houses/3/reservations (add a reservation(post method), view user reservations(get method))
+add a reservation example below: 
+
+{
+  "reservation": {
+    "reservation_date": "2023-08-15",
+    "city": "New York City"
+  }
+}
+
+
+http://127.0.0.1:3001/api/v1/reservations (list all the reservations of the logged in user(get method))
+
+Responese example below:
+
+[
+    {
+        "id": 1,
+        "user_id": 2,
+        "house_id": 4,
+        "city": "New York City",
+        "reservation_date": "2023-08-15T00:00:00.000Z",
+        "created_at": "2023-07-20T18:39:04.572Z",
+        "updated_at": "2023-07-20T18:39:04.572Z"
+    },
+    {
+        "id": 2,
+        "user_id": 2,
+        "house_id": 3,
+        "city": "New York City",
+        "reservation_date": "2023-08-15T00:00:00.000Z",
+        "created_at": "2023-07-20T18:40:32.048Z",
+        "updated_at": "2023-07-20T18:40:32.048Z"
+    },
+    {
+        "id": 3,
+        "user_id": 2,
+        "house_id": 4,
+        "city": "chicago",
+        "reservation_date": "2023-08-15T00:00:00.000Z",
+        "created_at": "2023-07-20T18:55:57.964Z",
+        "updated_at": "2023-07-20T18:55:57.964Z"
+    }
+]
+
+
+ http://127.0.0.1:3001/api/v1/houses/3/reservations/2 [/api/v1/houses/:house_id/reservations/:id] (cancele reservation(delete method))
 
