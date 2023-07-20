@@ -17,6 +17,15 @@ Devise.setup do |config|
   # config.secret_key = '4fcdf7419c1249489c2a14d0af6c363b90a7f704b9468c4b1c81b71afeeb459a70826506622270b41515096c0657e314c2a04b444b064b1161023d64f82c6ead'
   config.jwt do |jwt|
     jwt.secret = Rails.application.credentials.devise[:jwt_secret_key]
+    
+    jwt.dispatch_requests = [
+      ['POST', %r{^/sign_in$}]
+    ]
+    jwt.revocation_requests = [
+      ['DELETE', %r{^/sign_out$}]
+    ]
+    jwt.expiration_time = 30.minutes.to_i
+
   end
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
