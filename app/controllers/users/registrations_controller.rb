@@ -14,7 +14,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def success_register
     render json: {
       message: 'success',
-      data: UserSerializer.new(current_user).serializable_hash[:data][:attributes]
+      data: UserSerializer.new(current_user).serializable_hash[:data][:attributes].merge(role: current_user.role)
     }, status: :ok
   end
 
