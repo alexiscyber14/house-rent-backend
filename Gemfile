@@ -60,3 +60,15 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "devise", "~> 4.9"
+
+gem "webpacker", "~> 5.4"
+
+gem "devise-jwt", "~> 0.11.0"
+
+gem "rspec-rails", "~> 6.0"
+
+gem "jsonapi-serializer", "~> 2.2"
+
+gem "dotenv-rails", "~> 2.8"

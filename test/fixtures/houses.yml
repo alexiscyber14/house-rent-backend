@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  area: 1
+  rental_fee: 1
+
+two:
+  name: MyString
+  area: 1
+  rental_fee: 1

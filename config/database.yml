@@ -24,7 +24,6 @@ default: &default
   password: Starshine96
   port: 5432
 
-
 development:
   <<: *default
   database: house_rent_api
