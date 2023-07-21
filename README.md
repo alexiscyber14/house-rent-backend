@@ -26,8 +26,9 @@ Things you may want to cover:
 INSTRUCTIONS ON CREATING A HOUSE, DELTEIING A HOUSE, VIEWING A SPECIFIC HOUSE
 
 
-http://127.0.0.1:3001/sign_up (create a user(post method))
-Example below:
+ http://127.0.0.1:3001/sign_up (create a user(post method))
+- Example below:
+```sh
 {
   "user": {
     "name":"yosebbaf",
@@ -36,8 +37,9 @@ Example below:
     "password_confirmation": "password5050"
   }
 }
-
-response below:
+```
+- Response below:
+```sh
 {
     "message": "success",
     "data": {
@@ -47,7 +49,7 @@ response below:
         "role": "user"
     }
 }
-
+```
 
 
 
@@ -162,20 +164,20 @@ Example response belows:
 
 
  http://127.0.0.1:3001/api/v1/houses/3/reservations (add a reservation(post method), view user reservations(get method))
-add a reservation example below: 
-
+- Add a reservation example below: 
+```sh
 {
   "reservation": {
     "reservation_date": "2023-08-15",
     "city": "New York City"
   }
 }
+```
 
+***[]/api/v1/reservations (list all the reservations of the logged in user(get method))**
 
-http://127.0.0.1:3001/api/v1/reservations (list all the reservations of the logged in user(get method))
-
-Responese example below:
-
+- Responese example below:
+```sh
 [
     {
         "id": 1,
@@ -205,7 +207,6 @@ Responese example below:
         "updated_at": "2023-07-20T18:55:57.964Z"
     }
 ]
-
-
+```
  http://127.0.0.1:3001/api/v1/houses/3/reservations/2 [/api/v1/houses/:house_id/reservations/:id] (cancele reservation(delete method))
 
