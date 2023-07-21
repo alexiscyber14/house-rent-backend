@@ -52,15 +52,18 @@ response below:
 
 
 http://127.0.0.1:3001/sign_in (sign_in a user(post method))
-Example below: 
-{
+
+- Example below: 
+```sh{
   "user": {
     "email": "newur@example.com",
     "password": "password12345"
   }
 }
-response below: 
-{
+```
+- Response below:
+```sh 
+  {
     "message": "Logged in successfully.",
     "data": {
         "user": {
@@ -72,19 +75,13 @@ response below:
             "role": "user"
         }
     }
-}
+   }
+```
 
-
-
-
-
-
-
- 
 
 http://127.0.0.1:3001/api/v1/houses( create a house(post method), view all houses(get method))
-Add a house json example below:
- {
+- Add a house json example below:
+```sh {
    "house": {
     "name": "Catle la",
     "rental_fee": 10200,
@@ -95,7 +92,10 @@ Add a house json example below:
     "image_url": "http://example.com/image.jpg"
   }
 }
-View all house response example below:
+```
+- View all house response example below:
+
+```sh
 [
     {
         "id": 1,
@@ -137,10 +137,10 @@ View all house response example below:
         "user_id": 1
     }
 ]
-
+```
  http://127.0.0.1:3001/api/v1/houses/1 (show a specific house(get method), delete a house(delete method))
-example response belows:
-{
+Example response belows:
+```sh{
     "id": 1,
     "name": "My House",
     "location": "california",
@@ -153,11 +153,12 @@ example response belows:
     "image_url": "http://example.com/image.jpg",
     "user_id": 1
 }
-on delete;
-{
+```
+- On delete;
+```sh{
     "message": "House was successfully deleted."
 }
-
+```
 
 
  http://127.0.0.1:3001/api/v1/houses/3/reservations (add a reservation(post method), view user reservations(get method))
