@@ -7,6 +7,15 @@ Rails.application.routes.draw do
       sessions: 'users/sessions'
   }
 
+  namespace :api do
+    namespace :v1 do
+      resources :houses, only: [:index, :show, :create, :destroy] do
+        resources :reservations, only: [:index, :show, :create, :destroy]
+      end
+      get 'reservations', to: 'reservations#index_user_reservations'
+    end
+  end
+
   get '/member-data', to: 'members#show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

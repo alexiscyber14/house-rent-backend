@@ -1,5 +1,6 @@
 class House < ApplicationRecord
-  has_many :reservations
+  belongs_to :user
+  has_many :reservations, dependent: :destroy
   validates :name, presence: true
   validates :rental_fee, presence: true
 end

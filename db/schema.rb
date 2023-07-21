@@ -10,16 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_20_080503) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_20_182815) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "houses", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "area"
+    t.text "location"
     t.integer "rental_fee", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date_built"
+    t.string "category"
+    t.text "description"
+    t.string "image_url"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_houses_on_user_id"
   end
 
   create_table "jwt_denylist", force: :cascade do |t|
@@ -33,19 +39,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_20_080503) do
   create_table "reservations", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "house_id", null: false
-    t.string "location", null: false
+    t.string "city", null: false
     t.datetime "reservation_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["house_id"], name: "index_reservations_on_house_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
-  end
-
-  create_table "test_animals", id: :serial, force: :cascade do |t|
-    t.string "name", limit: 255, null: false
-    t.date "birth_date"
-    t.decimal "weight_kg"
-    t.string "species", limit: 50
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,6 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_20_080503) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "houses", "users"
   add_foreign_key "reservations", "houses"
   add_foreign_key "reservations", "users"
 end
