@@ -1,29 +1,133 @@
-# README
+<div align="center">
+  <h3><b>House Rental API Documentation</b></h3>
+</div>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 📗 Table of Contents
 
-Things you may want to cover:
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Catalog of my things ](#-catalog-of-my-things-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Dependencies](#dependencies)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ ](#-faq-)
+  - [📝 License ](#-license-)
 
-* Ruby version
+<!-- PROJECT DESCRIPTION -->
 
-* System dependencies
+# 📖 Greeting Rails <a name="about-project"></a>
+ The House Rental API is a web service that enables users to rent houses and manage reservations for those houses. It provides a secure and efficient platform for users to create accounts, log in, view available houses, make reservations, and manage their bookings. The API is designed to be easy to integrate with various front-end applications and offers robust authentication using JSON Web Tokens (JWTs) to ensure data security.
 
-* Configuration
 
-* Database creation
+## 🛠 Built With <a name="built-with"></a>
 
-* Database initialization
+### Tech Stack <a name="tech-stack"></a>
 
-* How to run the test suite
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby (v3.2.2)</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails (v7.0.5)</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Database</summary>
+  <ul>
+    <li><a href="https://postgresql.org">PostgreSQL</a></li>
+  </ul></details>
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+### Key Features <a name="key-features"></a>
 
-INSTRUCTIONS ON CREATING A HOUSE, DELTEIING A HOUSE, VIEWING A SPECIFIC HOUSE
+- User Registration: Users can create new accounts by providing their email and password.
+
+- User Authentication: Users can log in securely using their registered credentials and obtain JWT tokens for authenticated access to protected endpoints.
+
+- House Listing: The API allows users to view a list of available houses, including their names, rental fees, and locations.
+
+- House Details: Users can access detailed information about individual houses, such as images, descriptions, and amenities.
+
+- Reservation Management: Users can create, view, and cancel their reservations for specific houses based on desired dates and locations.
+
+- Data Protection: The API employs industry-standard security measures, including JWT-based authentication, to safeguard user data and ensure privacy.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+> To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+1. Ruby installed on your machine
+2. Text editor (VSCode, Sublime, Atom, etc.)
+3. Install Rails gem.
+4. PostgreSQL running on your machine
+
+### Setup
+
+Clone this [repository](https://github.com/alexiscyber14/house-rent-backend.git) to your desired folder:
+
+```sh
+  git clone https://github.com/alexiscyber14/house-rent-backend.git
+  cd Greeting-Rails
+```
+
+### Dependencies
+
+Install Dependencies with:
+
+```sh
+  bundle install
+```
+
+create database in your postgresql with:
+
+```sh
+  rails db:create
+```
+
+> Note: If you have any problem with the database, you can check the database.yml file and change the username and password to your own.
+
+Run migration with:
+
+```sh
+  rails db:migrate
+```
+
+### Usage
+
+Run Project with:
+
+```sh
+  rails server
+```
+
+### Run tests
+
+Run tests with:
+
+```sh
+  rspec
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## INSTRUCTIONS ON CREATING A HOUSE, DELTEIING A HOUSE, VIEWING A SPECIFIC HOUSE
 
 <br>
 
