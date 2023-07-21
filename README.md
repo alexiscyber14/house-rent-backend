@@ -26,8 +26,8 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Greeting Rails <a name="about-project"></a>
- The House Rental API is a web service that enables users to rent houses and manage reservations for those houses. It provides a secure and efficient platform for users to create accounts, log in, view available houses, make reservations, and manage their bookings. The API is designed to be easy to integrate with various front-end applications and offers robust authentication using JSON Web Tokens (JWTs) to ensure data security.
 
+The House Rental API is a web service that enables users to rent houses and manage reservations for those houses. It provides a secure and efficient platform for users to create accounts, log in, view available houses, make reservations, and manage their bookings. The API is designed to be easy to integrate with various front-end applications and offers robust authentication using JSON Web Tokens (JWTs) to ensure data security.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,8 +45,6 @@
   <ul>
     <li><a href="https://postgresql.org">PostgreSQL</a></li>
   </ul></details>
-
-
 
 ### Key Features <a name="key-features"></a>
 
@@ -123,54 +121,49 @@ Run tests with:
 ```sh
   rspec
 ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## API DOCUMENTATION
 
 - User Registration:
-To create a new user account, make a POST request to /sign_up. Include the user details (name, email, password, password_confirmation) in the request body as a JSON object.
+  To create a new user account, make a POST request to /sign_up. Include the user details (name, email, password, password_confirmation) in the request body as a JSON object.
 
 - User Login:
-To authenticate and obtain a JWT token, make a POST request to /sign_in. Include the user credentials (email, password) in the request body as a JSON object. The API will respond with the JWT token that you can use for authenticated requests.
+  To authenticate and obtain a JWT token, make a POST request to /sign_in. Include the user credentials (email, password) in the request body as a JSON object. The API will respond with the JWT token that you can use for authenticated requests.
 
 - List All Houses:
-To retrieve a list of all houses, make a GET request to /api/v1/houses. The API will respond with a JSON array containing house details (name, rental_fee, location) for each available house.
+  To retrieve a list of all houses, make a GET request to /api/v1/houses. The API will respond with a JSON array containing house details (name, rental_fee, location) for each available house.
 
 - Show House Details:
-To view details of a specific house, make a GET request to /api/v1/houses/:id. Replace :id with the ID of the house you want to view. The API will respond with a JSON object containing detailed information about the house.
+  To view details of a specific house, make a GET request to /api/v1/houses/:id. Replace :id with the ID of the house you want to view. The API will respond with a JSON object containing detailed information about the house.
 
 - Create a New House:
-To add a new house, make a POST request to /api/v1/houses. Include the house details (name, rental_fee, location,date_built, category, description, image_url) in the request body as a JSON object. The API will respond with the newly created house details.
+  To add a new house, make a POST request to /api/v1/houses. Include the house details (name, rental_fee, location,date_built, category, description, image_url) in the request body as a JSON object. The API will respond with the newly created house details.
 
 - Delete a House:
-To delete a specific house, make a DELETE request to /api/v1/houses/:id. Replace :id with the ID of the house you want to delete. The API will delete the house and respond with a success message.
+  To delete a specific house, make a DELETE request to /api/v1/houses/:id. Replace :id with the ID of the house you want to delete. The API will delete the house and respond with a success message.
 
 - List User Reservations:
-To view all reservations made by the logged-in user, make a GET request to /api/v1/reservations. The API will respond with a JSON array containing reservation details for the user's bookings.
+  To view all reservations made by the logged-in user, make a GET request to /api/v1/reservations. The API will respond with a JSON array containing reservation details for the user's bookings.
 
 - Show Reservation Details:
-To view details of a specific reservation, make a GET request to /api/v1/houses/:house_id/reservations/:id. Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to view. The API will respond with a JSON object containing detailed information about the reservation.
+  To view details of a specific reservation, make a GET request to /api/v1/houses/:house_id/reservations/:id. Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to view. The API will respond with a JSON object containing detailed information about the reservation.
 
 - Create a New Reservation:
-To make a reservation for a specific house, make a POST request to /api/v1/houses/:house_id/reservations. Include the reservation details (reservation_date, city) in the request body as a JSON object. The API will respond with the newly created reservation details.
+  To make a reservation for a specific house, make a POST request to /api/v1/houses/:house_id/reservations. Include the reservation details (reservation_date, city) in the request body as a JSON object. The API will respond with the newly created reservation details.
 
 - Delete a Reservation:
-To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house_id/reservations/:id. Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to cancel. The API will delete the reservation and respond with a success message.
-
-
-
-
-
-
-
+  To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house_id/reservations/:id. Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to cancel. The API will delete the reservation and respond with a success message.
 
 <br>
 
 ## Api examples examples below
 
- **/sign_up (create a user(post method))**
+**/sign_up (create a user(post method))**
+
 - Example below:
+
 ```sh
 {
   "user": {
@@ -181,7 +174,9 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
   }
 }
 ```
+
 - Response below:
+
 ```sh
 {
     "message": "success",
@@ -194,13 +189,13 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
 }
 ```
 
-
 <br>
 <br>
 
 **/sign_in (sign_in a user(post method))**
 
-- Example below: 
+- Example below:
+
 ```sh{
   "user": {
     "email": "newur@example.com",
@@ -208,8 +203,10 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
   }
 }
 ```
+
 - Response below:
-```sh 
+
+```sh
   {
     "message": "Logged in successfully.",
     "data": {
@@ -224,12 +221,109 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
     }
    }
 ```
-<br>
-<br>
+
+<br/>
+<br/>
+
+**/sign_out (sign_out a user(delete method))**
+
+<br/>
+
+<i>If you want to sign out a user, you will need an authorization key.</i>
+
+Example below(using POSTMAN):
+
+- You should copy and save your authorization key first which you can find in the header when you sign in
+
+<img src='./app/assets/img/sign_in.png' />
+
+<br/>
+
+- You should set the authorization key manually in the header when you want to sign out a user. After that you can sing out successfully.
+
+<img src='./app/assets/img/sign_out.png' />
+
+<br/>
+
+:note - if you want to use it in the client-app, you should save the authorization key in your local storage so that you can able to access the authorization key for sign out
+
+For example:
+
+- In sign_in part - you can
+
+```
+ localStorage.setItem("token", response.headers.get("Authorization"))
+```
+
+- In sign_out part - you can
+
+```
+try {
+            const response=await fetch("http://localhost:3000/sign_out",{
+                method: "delete",
+                headers: {
+                    "content-type": "application/json",
+                    "authorization": localStorage.getItem("token")
+                },
+            })
+            const data=await response.json()
+            if(!response.ok) throw data.error
+            localStorage.removeItem("token")
+}
+```
+
+<br/>
+<br/>
+
+**/member-data (access member data(get method))**
+
+- Member data can only be accessible to signed in users,
+
+```sh
+  {
+    "message": "success",
+    "user": {
+        "id": 1,
+        "name": "grace",
+        "email": "grace@example.com",
+        "created_at": "2023-07-21T13:03:10.999Z",
+        "updated_at": "2023-07-21T13:03:10.999Z",
+        "role": "user"
+    }
+  }
+
+```
+
+**/members (access members' data(get method))**
+
+- All Member data can only be accessible to admin
+
+```sh
+  [
+    {
+        "id": 1,
+        "name": "grace",
+        "email": "grace@example.com",
+        "created_at": "2023-07-21T13:03:10.999Z",
+        "updated_at": "2023-07-21T13:03:10.999Z",
+        "role": "user"
+    },
+    {
+        "id": 2,
+        "name": "htet",
+        "email": "htet@example.com",
+        "created_at": "2023-07-21T13:37:56.250Z",
+        "updated_at": "2023-07-21T13:37:56.250Z",
+        "role": "admin"
+    }
+]
+
+```
 
 **/api/v1/houses( create a house(post method), view all houses(get method))**
 
 - Add a house json example below:
+
 ```sh {
    "house": {
     "name": "Catle la",
@@ -242,6 +336,7 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
   }
 }
 ```
+
 - View all house response example below:
 
 ```sh
@@ -294,6 +389,7 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
 **/api/v1/houses/1 (show a specific house(get method), delete a house(delete method))**
 
 - Example response belows:
+
 ```sh{
     "id": 1,
     "name": "My House",
@@ -308,17 +404,21 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
     "user_id": 1
 }
 ```
+
 - On delete;
+
 ```sh{
     "message": "House was successfully deleted."
 }
 ```
+
 <br>
 <br>
 
- **/api/v1/houses/3/reservations (add a reservation(post method), view user reservations(get method))**
+**/api/v1/houses/3/reservations (add a reservation(post method), view user reservations(get method))**
 
-- Add a reservation example below: 
+- Add a reservation example below:
+
 ```sh
 {
   "reservation": {
@@ -327,12 +427,14 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
   }
 }
 ```
+
 <br>
 <br>
 
-**/api/v1/reservations   (list all the reservations of the logged in user(get method))**
+**/api/v1/reservations (list all the reservations of the logged in user(get method))**
 
 - Responese example below:
+
 ```sh
 [
     {
@@ -364,6 +466,7 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
     }
 ]
 ```
+
 <br>
 <br>
 
@@ -382,9 +485,27 @@ To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house
 - LinkedIn:[@Alex_Ssenyoondo](https://www.linkedin.com/in/alex-software/)
 - wellfound:[@alexiscyber14](https://angel.co/u/alexander-senyondo)
 
+### 👤 **Grace Htet**:
 
+- GitHub: [Grace Htet](https://github.com/GraceHtet)
+- LinkedIn: [Grace Htet](https://linkedin.com/in/thirihtethtetaung)
+- Twitter: [Grace Htet](https://twitter.com/Grace_Htet4)
+- Angelist: [Grace Htet](https://wellfound.com/u/thiri-htet)
 
+### 👤 **Hyder**:
 
+- GitHub: [Hyder](https://github.com/codeWithHyder)
+- LinkedIn: [Hyder](https://www.linkedin.com/in/ghulam-hyder-dar)
+
+### 👤 **Walid Kabboussa**:
+
+- GitHub: [Walid Kabboussa](https://github.com/Hisoka37)
+- LinkedIn: [Walid Kabboussa](https://www.linkedin.com/in/walidkb/)
+
+### 👤 **Yosefgeda**:
+
+- GitHub: [Yosefgeda](https://github.com/Yosefgeda)
+- LinkedIn: [Yosefgeda](https://www.linkedin.com/in/yosefgeda)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
