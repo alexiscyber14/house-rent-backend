@@ -174,7 +174,7 @@ Example response belows:
 }
 ```
 
-***/api/v1/reservations (list all the reservations of the logged in user(get method))**
+**/api/v1/reservations (list all the reservations of the logged in user(get method))**
 
 - Responese example below:
 ```sh
