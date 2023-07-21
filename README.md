@@ -126,7 +126,6 @@ Run tests with:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 ## API DOCUMENTATION
 
 <br>
@@ -331,3 +330,77 @@ Run tests with:
 
 **/api/v1/houses/3/reservations/2 [/api/v1/houses/:house_id/reservations/:id] (cancele reservation(delete method))**
 
+<br>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Alexander Ssenyondo**
+
+- GitHub: [@alexiscyber14](https://github.com/alexiscyber14)
+- Instagram:[@Alexiscyber14](https://www.instagram.com/alexiscyber14/)
+- LinkedIn:[@Alex_Ssenyoondo](https://www.linkedin.com/in/alex-software/)
+- wellfound:[@alexiscyber14](https://angel.co/u/alexander-senyondo)
+
+
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- House Search and Filters: Implement advanced search and filtering options to allow users to find houses based on specific criteria such as location, rental fee range, number of bedrooms, amenities, and availability.
+
+- House Ratings and Reviews: Enable users to leave ratings and reviews for houses they have rented, helping others make informed decisions based on previous guests' experiences.
+
+- House Booking Calendar: Introduce a calendar view that displays the availability of houses, allowing users to see which dates are already booked and which dates are open for reservations.
+
+- House Recommendations: Implement a recommendation system that suggests houses to users based on their previous rentals, preferences, and search history.
+
+- User Profiles: Allow users to create and manage their profiles, including personal information, preferences, and past rental history.
+
+- House Owner Dashboard: Provide house owners with a dashboard to manage their properties, view rental analytics, and respond to guest inquiries.
+
+- Real-Time Notifications: Implement real-time notifications to alert users about reservation confirmations, cancellations, or other important updates.
+
+- Payment Integration: Integrate a secure payment gateway to facilitate online payments for reservations, making the booking process seamless and convenient.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/alexiscyber14/ror-react/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please leave a ⭐️
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I thank Microverse for making this project possible.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
