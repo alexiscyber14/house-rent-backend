@@ -128,7 +128,46 @@ Run tests with:
 
 ## API DOCUMENTATION
 
+- User Registration:
+To create a new user account, make a POST request to /sign_up. Include the user details (name, email, password, password_confirmation) in the request body as a JSON object.
+
+- User Login:
+To authenticate and obtain a JWT token, make a POST request to /sign_in. Include the user credentials (email, password) in the request body as a JSON object. The API will respond with the JWT token that you can use for authenticated requests.
+
+- List All Houses:
+To retrieve a list of all houses, make a GET request to /api/v1/houses. The API will respond with a JSON array containing house details (name, rental_fee, location) for each available house.
+
+- Show House Details:
+To view details of a specific house, make a GET request to /api/v1/houses/:id. Replace :id with the ID of the house you want to view. The API will respond with a JSON object containing detailed information about the house.
+
+- Create a New House:
+To add a new house, make a POST request to /api/v1/houses. Include the house details (name, rental_fee, location,date_built, category, description, image_url) in the request body as a JSON object. The API will respond with the newly created house details.
+
+- Delete a House:
+To delete a specific house, make a DELETE request to /api/v1/houses/:id. Replace :id with the ID of the house you want to delete. The API will delete the house and respond with a success message.
+
+- List User Reservations:
+To view all reservations made by the logged-in user, make a GET request to /api/v1/reservations. The API will respond with a JSON array containing reservation details for the user's bookings.
+
+- Show Reservation Details:
+To view details of a specific reservation, make a GET request to /api/v1/houses/:house_id/reservations/:id. Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to view. The API will respond with a JSON object containing detailed information about the reservation.
+
+- Create a New Reservation:
+To make a reservation for a specific house, make a POST request to /api/v1/houses/:house_id/reservations. Include the reservation details (reservation_date, city) in the request body as a JSON object. The API will respond with the newly created reservation details.
+
+- Delete a Reservation:
+To cancel a specific reservation, make a DELETE request to /api/v1/houses/:house_id/reservations/:id. Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to cancel. The API will delete the reservation and respond with a success message.
+
+
+
+
+
+
+
+
 <br>
+
+## Api examples examples below
 
  **/sign_up (create a user(post method))**
 - Example below:
