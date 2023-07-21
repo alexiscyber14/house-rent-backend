@@ -25,8 +25,9 @@ Things you may want to cover:
 
 INSTRUCTIONS ON CREATING A HOUSE, DELTEIING A HOUSE, VIEWING A SPECIFIC HOUSE
 
+<br>
 
- http://127.0.0.1:3001/sign_up (create a user(post method))
+ **/sign_up (create a user(post method))**
 - Example below:
 ```sh
 {
@@ -52,8 +53,10 @@ INSTRUCTIONS ON CREATING A HOUSE, DELTEIING A HOUSE, VIEWING A SPECIFIC HOUSE
 ```
 
 
+<br>
+<br>
 
-http://127.0.0.1:3001/sign_in (sign_in a user(post method))
+**/sign_in (sign_in a user(post method))**
 
 - Example below: 
 ```sh{
@@ -79,9 +82,11 @@ http://127.0.0.1:3001/sign_in (sign_in a user(post method))
     }
    }
 ```
+<br>
+<br>
 
+**/api/v1/houses( create a house(post method), view all houses(get method))**
 
-http://127.0.0.1:3001/api/v1/houses( create a house(post method), view all houses(get method))
 - Add a house json example below:
 ```sh {
    "house": {
@@ -140,8 +145,13 @@ http://127.0.0.1:3001/api/v1/houses( create a house(post method), view all house
     }
 ]
 ```
- http://127.0.0.1:3001/api/v1/houses/1 (show a specific house(get method), delete a house(delete method))
-Example response belows:
+
+<br>
+<br>
+
+**/api/v1/houses/1 (show a specific house(get method), delete a house(delete method))**
+
+- Example response belows:
 ```sh{
     "id": 1,
     "name": "My House",
@@ -161,9 +171,11 @@ Example response belows:
     "message": "House was successfully deleted."
 }
 ```
+<br>
+<br>
 
+ **/api/v1/houses/3/reservations (add a reservation(post method), view user reservations(get method))**
 
- http://127.0.0.1:3001/api/v1/houses/3/reservations (add a reservation(post method), view user reservations(get method))
 - Add a reservation example below: 
 ```sh
 {
@@ -173,8 +185,10 @@ Example response belows:
   }
 }
 ```
+<br>
+<br>
 
-**/api/v1/reservations (list all the reservations of the logged in user(get method))**
+**/api/v1/reservations   (list all the reservations of the logged in user(get method))**
 
 - Responese example below:
 ```sh
@@ -208,5 +222,8 @@ Example response belows:
     }
 ]
 ```
- http://127.0.0.1:3001/api/v1/houses/3/reservations/2 [/api/v1/houses/:house_id/reservations/:id] (cancele reservation(delete method))
+<br>
+<br>
+
+**/api/v1/houses/3/reservations/2 [/api/v1/houses/:house_id/reservations/:id] (cancele reservation(delete method))**
 
