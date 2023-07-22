@@ -132,6 +132,9 @@ Run tests with:
 - User Login:
   To authenticate and obtain a JWT token, make a POST request to /sign_in. Include the user credentials (email, password) in the request body as a JSON object. The API will respond with the JWT token that you can use for authenticated requests.
 
+- User Logout:
+  To log out, make a DELETE request to /sign_out. Include the user authorization token in the request headers as a JSON object. The API will respond with the JWT token that you receive.
+
 - List All Houses:
   To retrieve a list of all houses, make a GET request to /api/v1/houses. The API will respond with a JSON array containing house details (name, rental_fee, location) for each available house.
 
@@ -228,8 +231,6 @@ Run tests with:
 **/sign_out (sign_out a user(delete method))**
 
 <br/>
-
-<i>If you want to sign out a user, you will need an authorization key.</i>
 
 Example below(using POSTMAN):
 
