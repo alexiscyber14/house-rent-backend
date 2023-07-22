@@ -17,8 +17,9 @@ Rails.application.routes.draw do
   end
 
   get '/member-data', to: 'members#show'
+  get '/members', to: 'members#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  delete '/users/sign_out', to: 'users/sessions#destroy'
   # Defines the root path route ("/")
   # root "articles#index"
 end

@@ -19,6 +19,8 @@ module HouseRentApi
 
     config.middleware.use config.session_store, config.session_options
 
+    config.jwt_secret_key = '775c6b9dc5011fa550fed30e743ab17ba29181cb02c1aaf38772cfefce815a48676908ab9710be17a134590f4f516025c1b6ad09a8efa3c85b3dde0bbbf896fe'
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
