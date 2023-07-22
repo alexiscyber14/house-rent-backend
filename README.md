@@ -15,6 +15,7 @@
     - [Install](#install)
     - [Dependencies](#dependencies)
     - [Usage](#usage)
+  - [API Documentation](#api-documentation)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -123,6 +124,7 @@ Run tests with:
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a href="#api-documention">API Documentation</a>
 
 ## API DOCUMENTATION
 
@@ -133,7 +135,7 @@ Run tests with:
   To authenticate and obtain a JWT token, make a POST request to /sign_in. Include the user credentials (email, password) in the request body as a JSON object. The API will respond with the JWT token that you can use for authenticated requests.
 
 - User Logout:
-  To log out, make a DELETE request to /sign_out. Include the user authorization token in the request headers as a JSON object. The API will respond with the JWT token that you receive.
+  To log out, make a DELETE request to /sign_out.
 
 - List All Houses:
   To retrieve a list of all houses, make a GET request to /api/v1/houses. The API will respond with a JSON array containing house details (name, rental_fee, location) for each available house.
@@ -199,9 +201,10 @@ Run tests with:
 
 - Example below:
 
-```sh{
+```sh
+{
   "user": {
-    "email": "newur@example.com",
+    "name": "yosebbaf",
     "password": "password12345"
   }
 }
@@ -230,47 +233,23 @@ Run tests with:
 
 **/sign_out (sign_out a user(delete method))**
 
-<br/>
+- Example below:
 
-Example below(using POSTMAN):
-
-- You should copy and save your authorization key first which you can find in the header when you sign in
-
-<img src='./app/assets/img/sign_in.png' />
-
-<br/>
-
-- You should set the authorization key manually in the header when you want to sign out a user. After that you can sing out successfully.
-
-<img src='./app/assets/img/sign_out.png' />
-
-<br/>
-
-:note - if you want to use it in the client-app, you should save the authorization key in your local storage so that you can able to access the authorization key for sign out
-
-For example:
-
-- In sign_in part - you can
-
-```
- localStorage.setItem("token", response.headers.get("Authorization"))
-```
-
-- In sign_out part - you can
-
-```
-try {
-            const response=await fetch("http://localhost:3000/sign_out",{
-                method: "delete",
-                headers: {
-                    "content-type": "application/json",
-                    "authorization": localStorage.getItem("token")
-                },
-            })
-            const data=await response.json()
-            if(!response.ok) throw data.error
-            localStorage.removeItem("token")
+```sh
+{
+  "user": {
+    "name": "yosebbaf",
+    "password": "password12345"
+  }
 }
+```
+
+- Response below:
+
+```sh
+  {
+    "message": "Logged out successfully."
+  }
 ```
 
 <br/>
