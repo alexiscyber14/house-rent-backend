@@ -3,7 +3,7 @@ require 'devise'
 
 RSpec.describe Reservation, type: :model do
   before(:each) do
-    user = User.create(name: "Alex", email: 'user@example.com', password: 'password', password_confirmation: "password")
+    user = User.create(name: 'Alex', email: 'user@example.com', password: 'password', password_confirmation: 'password')
     @house = House.create(
       name: 'one-floor',
       location: '100',
@@ -12,10 +12,10 @@ RSpec.describe Reservation, type: :model do
       category: 'apartment',
       description: 'very nice',
       image_url: 'https://goodle.com/image.pn',
-      user: user # Set the user association here
+      user: # Set the user association here
     )
     @reservation = Reservation.create(
-      user: user,
+      user:,
       house: @house,
       city: 'yangon',
       reservation_date: '2021-07-19 15:04:28'

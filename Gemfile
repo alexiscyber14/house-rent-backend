@@ -72,3 +72,5 @@ gem "rspec-rails", "~> 6.0"
 gem "jsonapi-serializer", "~> 2.2"
 
 gem "dotenv-rails", "~> 2.8"
+
+gem 'factory_bot_rails', '~> 6.2'

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe House, type: :model do
   before(:each) do
     # Create a User object for the association
-    user = User.create(name:"Alex", email: 'user@example.com', password: 'password', password_confirmation:"password")
+    user = User.create(name: 'Alex', email: 'user@example.com', password: 'password', password_confirmation: 'password')
 
     @house = House.create(
       name: 'one-floor',
@@ -13,7 +13,7 @@ RSpec.describe House, type: :model do
       category: 'apartment',
       description: 'very nice',
       image_url: 'https://goodle.com/image.pn',
-      user: user # Set the user association here
+      user: # Set the user association here
     )
   end
 
