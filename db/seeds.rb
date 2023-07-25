@@ -1,5 +1,5 @@
-grace = User.create(name: "Grace", email: "grace@example.com",password:"password",role:"admin")
-htet = User.create(name: "Htet", email: "htet@example.com", password: "password")
+grace = User.create(name: "grace", email: "grace@example.com",password:"password")
+htet = User.create(name: "htet", email: "htet@example.com", password: "password",role:"admin")
 
 house1 = House.create(name: "House 1", location: "Yangon",rental_fee: 2000, date_built:'2000-12-12',category:'apartment', user: grace)
 house2 = House.create(name: "House 2", location: "Mandalay", rental_fee: 3000, user: htet)
