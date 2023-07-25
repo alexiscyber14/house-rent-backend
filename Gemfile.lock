@@ -253,13 +253,6 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.0.0)
-    sprockets (4.2.0)
-      concurrent-ruby (~> 1.0)
-      rack (>= 2.2.4, < 4)
-    sprockets-rails (3.4.2)
-      actionpack (>= 5.2)
-      activesupport (>= 5.2)
-      sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     thor (1.2.2)
@@ -323,7 +316,6 @@ DEPENDENCIES
   rspec-rails (~> 6.0)
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
-  sprockets-rails
   stimulus-rails
   turbo-rails
   tzinfo-data
