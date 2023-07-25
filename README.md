@@ -6,7 +6,6 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Catalog of my things ](#-catalog-of-my-things-)
-- [🚀 Live Demo ](#🚀-live-demo-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -30,12 +29,6 @@
 # 📖 Greeting Rails <a name="about-project"></a>
 
 The House Rental API is a web service that enables users to rent houses and manage reservations for those houses. It provides a secure and efficient platform for users to create accounts, log in, view available houses, make reservations, and manage their bookings. The API is designed to be easy to integrate with various front-end applications and offers robust authentication using JSON Web Tokens (JWTs) to ensure data security.
-
-## [Link to the front-end repo](https://github.com/codeWithHyder/house-rent-frontend)
-
-### 🚀 Live Demo
-
-- [Live Demo Link](https://house-rent-api.onrender.com)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -134,6 +127,8 @@ Run tests with:
 <a href="#api-documention">API Documentation</a>
 
 ## API DOCUMENTATION
+
+### <i>Base URL: https://house-rent-api.onrender.com/ </i>
 
 - User Registration:
   To create a new user account, make a POST request to /sign_up. Include the user details (name, email, password, password_confirmation) in the request body as a JSON object.
