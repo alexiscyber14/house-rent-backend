@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe MembersController, type: :controller do
   before(:each) do
-    @user_one = User.create(name: 'User one', email: 'userone@example.com', password: 'password', role: 'admin')
+    @user_one = User.create(name: 'User one', email: 'userone@example.com', password: 'password')
     @user_two = User.create(name: 'User two', email: 'usertwo@example.com', password: 'password')
 
     sign_in @user_one
@@ -24,7 +24,7 @@ RSpec.describe MembersController, type: :controller do
     it 'has a correct response body' do
       user = JSON.parse(response.body)
 
-      assert_equal user.length, 2
+      assert_equal user.length, 1
     end
   end
 
