@@ -8,7 +8,7 @@ module Api
 
       # GET /api/v1/reservations
       def index
-        @reservations = current_user.reservations
+        @reservations = current_user.reservations.includes(:house).where(house_id: params[:house_id])
         render json: @reservations
       end
 
@@ -19,7 +19,7 @@ module Api
 
       # GET /api/v1/reservations/1
       def show
-        @reservation = current_user.reservations.find(params[:id])
+        @reservation = current_user.reservations.includes(:house).where(house_id: params[:house_id]).find(params[:id])
         render json: @reservation
       end
 
