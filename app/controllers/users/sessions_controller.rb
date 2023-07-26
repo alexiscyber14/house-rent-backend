@@ -1,5 +1,5 @@
 class Users::SessionsController < Devise::SessionsController
-  include ActionController::MimeResponds 
+  include ActionController::MimeResponds
   include RackSessionsFix
 
   respond_to :json
