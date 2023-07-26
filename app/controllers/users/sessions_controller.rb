@@ -1,8 +1,13 @@
 class Users::SessionsController < Devise::SessionsController
-  # POST /resource/sign_in
+  include ActionController::MimeResponds 
   include RackSessionsFix
 
   respond_to :json
+
+  def create
+    user = current_user
+    respond_with user
+  end
 
   def destroy
     sign_out(current_user)
