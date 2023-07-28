@@ -19,6 +19,11 @@ module Api
 
       # POST /api/v1/houses
       def create
+        unless current_user.role == 'admin'
+          render_json_response('You are not authorized to update this house.', :unauthorized)
+          return
+        end
+        
         @house = current_user.houses.build(house_params)
 
         if @house.save
@@ -30,7 +35,7 @@ module Api
 
       # PATCH/PUT /api/v1/houses/1
       def update
-        unless current_user == @house.user
+        unless current_user == @house.user || current_user.role == 'admin'
           render_json_response('You are not authorized to update this house.', :unauthorized)
           return
         end
@@ -44,13 +49,13 @@ module Api
 
       # DELETE /api/v1/houses/1
       def destroy
-        unless current_user == @house.user
+        unless current_user == @house.user || current_user.role == 'admin'
           render_json_response('You are not authorized to delete this house.', :unauthorized)
           return
         end
-
+      
         @house.destroy
-        render_json_response('House was successfully deleted.')
+        render_json_response('House was successfully deleted.', :ok)
       end
 
       private
