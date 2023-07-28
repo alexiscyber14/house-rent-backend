@@ -6,7 +6,7 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
 
-gem "sprockets-rails"
+# gem "sprockets-rails"
 # Use postgresql as the database for Active Record
 gem "pg"
 
@@ -33,7 +33,7 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-gem "jsbundling-rails"
+# gem "jsbundling-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"

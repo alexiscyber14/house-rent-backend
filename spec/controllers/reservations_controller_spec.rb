@@ -70,7 +70,6 @@ RSpec.describe Api::V1::ReservationsController, type: :controller do
     end
   end
 
-
   describe 'DELETE #destroy' do
     context 'when user is authenticated' do
       let(:user) { FactoryBot.create(:user) }

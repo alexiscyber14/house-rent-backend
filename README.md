@@ -128,6 +128,8 @@ Run tests with:
 
 ## API DOCUMENTATION
 
+### <i>Base URL: https://house-rent-api.onrender.com/ </i>
+
 - User Registration:
   To create a new user account, make a POST request to /sign_up. Include the user details (name, email, password, password_confirmation) in the request body as a JSON object.
 
