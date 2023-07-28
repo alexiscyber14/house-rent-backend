@@ -23,7 +23,7 @@ module Api
           render_json_response('You are not authorized to update this house.', :unauthorized)
           return
         end
-        
+
         @house = current_user.houses.build(house_params)
 
         if @house.save
@@ -53,7 +53,7 @@ module Api
           render_json_response('You are not authorized to delete this house.', :unauthorized)
           return
         end
-      
+
         @house.destroy
         render_json_response('House was successfully deleted.', :ok)
       end
