@@ -4,6 +4,7 @@ module Api
     class HousesController < ApplicationController
       before_action :authenticate_user!, only: %i[create destroy]
       before_action :set_house, only: %i[show edit update destroy]
+      before_action :find_user, only: %i[create update destroy]
       respond_to :json
 
       # GET /api/v1/houses
@@ -19,12 +20,12 @@ module Api
 
       # POST /api/v1/houses
       def create
-        unless current_user.role == 'admin'
+        unless @user.role == 'admin'
           render_json_response('You are not authorized to update this house.', :unauthorized)
           return
         end
 
-        @house = current_user.houses.build(house_params)
+        @house = @user.houses.build(house_params)
 
         if @house.save
           render json: @house, status: :created
@@ -35,7 +36,7 @@ module Api
 
       # PATCH/PUT /api/v1/houses/1
       def update
-        unless current_user == @house.user || current_user.role == 'admin'
+        unless @user == @house.user || @user.role == 'admin'
           render_json_response('You are not authorized to update this house.', :unauthorized)
           return
         end
@@ -49,7 +50,7 @@ module Api
 
       # DELETE /api/v1/houses/1
       def destroy
-        unless current_user == @house.user || current_user.role == 'admin'
+        unless @user.role == 'admin'
           render_json_response('You are not authorized to delete this house.', :unauthorized)
           return
         end
@@ -72,6 +73,12 @@ module Api
 
       def render_json_response(message, status = :ok)
         render json: { message: }, status:
+      end
+
+      def find_user
+        @user = User.find(params[:user_id])
+      rescue ActiveRecord::RecordNotFound
+        render json: { errors: 'User not found' }, status: :not_found
       end
     end
   end
