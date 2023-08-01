@@ -130,6 +130,8 @@ Run tests with:
 
 ### <i>Base URL: https://house-rent-api.onrender.com/ </i>
 
+note: If you want to test with admin, you can use the info from the seeds.rb. The data from the seeds.rb file was already created on the server. If you want to test with localhost, you should run rails db:seed first before running the server.
+
 - User Registration:
   To create a new user account, make a POST request to /sign_up. Include the user details (name, email, password, password_confirmation) in the request body as a JSON object.
 
@@ -146,10 +148,10 @@ Run tests with:
   To view details of a specific house, make a GET request to /api/v1/houses/:id. Replace :id with the ID of the house you want to view. The API will respond with a JSON object containing detailed information about the house.
 
 - Create a New House:
-  To add a new house, make a POST request to /api/v1/houses. Include the house details (name, rental_fee, location,date_built, category, description, image_url) in the request body as a JSON object. The API will respond with the newly created house details.
+  To add a new house, make a POST request to /api/v1/houses?user_id=:user_id . Replace :user_id with the ID of the user which you want to use to create a house. And that creator needs to be an admin. Include the house details (name, rental_fee, location,date_built, category, description, image_url) in the request body as a JSON object. The API will respond with the newly created house details.
 
 - Delete a House:
-  To delete a specific house, make a DELETE request to /api/v1/houses/:id. Replace :id with the ID of the house you want to delete. The API will delete the house and respond with a success message.
+  To delete a specific house, make a DELETE request to /api/v1/houses/:id?user_id=:user_id. Replace :user_id with the ID of the user which you want to use to delete a house. And that user needs to be an admin. Replace :id with the ID of the house you want to delete. The API will delete the house and respond with a success message.
 
 - List User Reservations:
   To view all reservations made by the logged-in user, make a GET request to /api/v1/reservations. The API will respond with a JSON array containing reservation details for the user's bookings.
@@ -302,11 +304,12 @@ Run tests with:
 
 ```
 
-**/api/v1/houses( create a house(post method), view all houses(get method))**
+**/api/v1/houses?user_id=1( create a house(post method), view all houses(get method))**
 
 - Add a house json example below:
 
-```sh {
+```sh
+{
    "house": {
     "name": "Catle la",
     "rental_fee": 10200,
@@ -317,7 +320,10 @@ Run tests with:
     "image_url": "http://example.com/image.jpg"
   }
 }
+
 ```
+
+**/api/v1/houses (view all houses(get method))**
 
 - View all house response example below:
 
@@ -368,7 +374,7 @@ Run tests with:
 <br>
 <br>
 
-**/api/v1/houses/1 (show a specific house(get method), delete a house(delete method))**
+**/api/v1/houses/1?user_id=1 (show a specific house(get method), delete a house(delete method))**
 
 - Example response belows:
 
@@ -382,8 +388,7 @@ Run tests with:
     "date_built": "2000-01-01",
     "category": "Apartment",
     "description": "A cozy apartment",
-    "image_url": "http://example.com/image.jpg",
-    "user_id": 1
+    "image_url": "http://example.com/image.jpg"
 }
 ```
 
