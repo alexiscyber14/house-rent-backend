@@ -43,7 +43,6 @@ RSpec.describe Api::V1::HousesController, type: :controller do
     end
   end
 
-
   describe 'POST #create' do
     context 'when user is authenticated' do
       let(:user) { FactoryBot.create(:user) }

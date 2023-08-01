@@ -128,7 +128,9 @@ Run tests with:
 
 ## API DOCUMENTATION
 
-If you want to test with admin, you can use the info from the seeds.rb. The data from the seeds.rb file was already created on the server. If you want to test with localhost, you should run rails db:seed first before running the server.
+### <i>Base URL: https://house-rent-api.onrender.com/ </i>
+
+note: If you want to test with admin, you can use the info from the seeds.rb. The data from the seeds.rb file was already created on the server. If you want to test with localhost, you should run rails db:seed first before running the server.
 
 - User Registration:
   To create a new user account, make a POST request to /sign_up. Include the user details (name, email, password, password_confirmation) in the request body as a JSON object.
