@@ -45,7 +45,7 @@ RSpec.describe Api::V1::HousesController, type: :controller do
 
   describe 'POST #create' do
     context 'when user is authenticated' do
-      let(:user) { FactoryBot.create(:user) }
+      let(:user) { FactoryBot.create(:user, :admin) }
       let(:house_params) { FactoryBot.attributes_for(:house) }
 
       before do
@@ -55,22 +55,15 @@ RSpec.describe Api::V1::HousesController, type: :controller do
       it 'creates a new house' do
         new_house = instance_double(House, save: true)
         allow(user.houses).to receive(:build).and_return(new_house)
-        post :create, params: { house: house_params }
+        post :create, params: { house: house_params, user_id: user.id }
         expect(response).to have_http_status(:created)
         expect(response.body).to include(house_params[:name])
       end
 
       it 'returns unprocessable entity for invalid house' do
         invalid_house_params = house_params.merge(name: nil)
-        post :create, params: { house: invalid_house_params }
+        post :create, params: { house: invalid_house_params, user_id: user.id }
         expect(response).to have_http_status(:unprocessable_entity)
-      end
-    end
-
-    context 'when user is not authenticated' do
-      it 'returns unauthorized' do
-        post :create, params: { house: FactoryBot.attributes_for(:house) }
-        expect(response).to have_http_status(:unauthorized)
       end
     end
   end

@@ -30,6 +30,8 @@
 
 The House Rental API is a web service that enables users to rent houses and manage reservations for those houses. It provides a secure and efficient platform for users to create accounts, log in, view available houses, make reservations, and manage their bookings. The API is designed to be easy to integrate with various front-end applications and offers robust authentication using JSON Web Tokens (JWTs) to ensure data security.
 
+## [Link to Front-End Repository](https://github.com/codeWithHyder/house-rent-frontend/pull/34)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -155,6 +157,9 @@ note: If you want to test with admin, you can use the info from the seeds.rb. Th
 
 - List User Reservations:
   To view all reservations made by the logged-in user, make a GET request to /api/v1/reservations. The API will respond with a JSON array containing reservation details for the user's bookings.
+
+- List House Reservations:
+  To view all reservations made by the logged-in user, make a GET request to /api/v1/houses/:house_id/reservations/:id.Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to view. The API will respond with a JSON array containing reservation details for the user's bookings.
 
 - Show Reservation Details:
   To view details of a specific reservation, make a GET request to /api/v1/houses/:house_id/reservations/:id. Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to view. The API will respond with a JSON object containing detailed information about the reservation.
@@ -540,7 +545,7 @@ If you like this project, please leave a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I thank Microverse for making this project possible.
+I thank Microverse for making this project possible and Murat Korkmaz, the owner of our project design template.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

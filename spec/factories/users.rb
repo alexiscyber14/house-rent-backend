@@ -8,5 +8,9 @@ FactoryBot.define do
     email { generate(:email) }
     password { 'password' }
     password_confirmation { 'password' }
+
+    trait :admin do
+      role { :admin }
+    end
   end
 end
