@@ -5,7 +5,8 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 House Rental Api ](#-House-rental-)
+- [📖 Catalog of my things ](#-catalog-of-my-things-)
+  - [Kanban board](#kanban-board)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -26,11 +27,17 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 House Rental Api <a name="about-project"></a>
+# 📖 Greeting Rails <a name="about-project"></a>
 
 The House Rental API is a web service that enables users to rent houses and manage reservations for those houses. It provides a secure and efficient platform for users to create accounts, log in, view available houses, make reservations, and manage their bookings. The API is designed to be easy to integrate with various front-end applications and offers robust authentication using JSON Web Tokens (JWTs) to ensure data security.
 
 ## [Link to Front-End Repository](https://github.com/codeWithHyder/house-rent-frontend/pull/34)
+
+## [Link to Kanban Board](https://github.com/users/alexiscyber14/projects/12)
+
+### [Link to Kanban Board Image 1](https://github.com/alexiscyber14/house-rent-backend/assets/64640424/272569bb-8e49-4e3f-9110-f6bbe3922749)
+
+### [Link to Kanban Board Image 2](https://github.com/alexiscyber14/house-rent-backend/assets/64640424/3683eef7-838a-4328-bfde-8b0aa2e4f026)
 
 ## 🛠 Built With <a name="built-with"></a>
 
