@@ -6,7 +6,7 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
 
-gem "sprockets-rails"
+# gem "sprockets-rails"
 # Use postgresql as the database for Active Record
 gem "pg"
 
@@ -33,7 +33,7 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-gem "jsbundling-rails"
+# gem "jsbundling-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
@@ -60,3 +60,17 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "devise", "~> 4.9"
+
+gem "webpacker", "~> 5.4"
+
+gem "devise-jwt", "~> 0.11.0"
+
+gem "rspec-rails", "~> 6.0"
+
+gem "jsonapi-serializer", "~> 2.2"
+
+gem "dotenv-rails", "~> 2.8"
+
+gem 'factory_bot_rails', '~> 6.2'
