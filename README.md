@@ -158,6 +158,9 @@ note: If you want to test with admin, you can use the info from the seeds.rb. Th
 - List User Reservations:
   To view all reservations made by the logged-in user, make a GET request to /api/v1/reservations. The API will respond with a JSON array containing reservation details for the user's bookings.
 
+- List House Reservations:
+  To view all reservations made by the logged-in user, make a GET request to /api/v1/houses/:house_id/reservations/:id.Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to view. The API will respond with a JSON array containing reservation details for the user's bookings.
+
 - Show Reservation Details:
   To view details of a specific reservation, make a GET request to /api/v1/houses/:house_id/reservations/:id. Replace :house_id with the ID of the house associated with the reservation, and :id with the ID of the reservation you want to view. The API will respond with a JSON object containing detailed information about the reservation.
 
