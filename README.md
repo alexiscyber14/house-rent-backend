@@ -542,7 +542,7 @@ If you like this project, please leave a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I thank Microverse for making this project possible.
+I thank Microverse for making this project possible and Murat Korkmaz, the owner of our project design template.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

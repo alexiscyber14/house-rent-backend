@@ -3,23 +3,24 @@ module Api
   module V1
     class ReservationsController < ApplicationController
       before_action :authenticate_user!, only: %i[index create destroy]
+      before_action :find_user
       # before_action :set_house, only: %i[show edit update destroy]
       respond_to :json
 
       # GET /api/v1/reservations
       def index
-        @reservations = current_user.reservations.includes(:house).where(house_id: params[:house_id])
+        @reservations = @user.reservations.includes(:house).where(house_id: params[:house_id])
         render json: @reservations
       end
 
       def index_user_reservations
-        @reservations = current_user.reservations
+        @reservations = @user.reservations
         render json: @reservations
       end
 
       # GET /api/v1/reservations/1
       def show
-        @reservation = current_user.reservations.includes(:house).where(house_id: params[:house_id]).find(params[:id])
+        @reservation = @user.reservations.includes(:house).where(house_id: params[:house_id]).find(params[:id])
         render json: @reservation
       end
 
@@ -27,7 +28,7 @@ module Api
       def create
         @house = House.find(params[:house_id])
         @reservation = @house.reservations.build(reservation_params)
-        @reservation.user = current_user
+        @reservation.user = @user
 
         if @reservation.save
           render json: @reservation, status: :created
@@ -38,7 +39,7 @@ module Api
 
       # DELETE /api/v1/reservations/1
       def destroy
-        @reservation = current_user.reservations.find(params[:id])
+        @reservation = @user.reservations.find(params[:id])
         @reservation.destroy
         render_json_response('Reservation was successfully canceled.')
       end
@@ -51,6 +52,12 @@ module Api
 
       def render_json_response(message, status = :ok)
         render json: { message: }, status:
+      end
+
+      def find_user
+        @user = User.find(params[:user_id])
+      rescue ActiveRecord::RecordNotFound
+        render json: { errors: 'User not found' }, status: :not_found
       end
     end
   end
