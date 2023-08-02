@@ -22,8 +22,8 @@ default: &default
   host: localhost
   username: postgres
   password: Starshine96
+  password: grace1960
   port: 5432
-
 
 development:
   <<: *default
@@ -86,5 +86,6 @@ test:
 production:
   <<: *default
   database: house_rent_api
+  url: <%= ENV['DATABASE_URL'] %>
   #username: house_rent_api
   #password: <%= ENV["HOUSE_RENT_API_DATABASE_PASSWORD"] %>
