@@ -30,6 +30,8 @@
 
 The House Rental API is a web service that enables users to rent houses and manage reservations for those houses. It provides a secure and efficient platform for users to create accounts, log in, view available houses, make reservations, and manage their bookings. The API is designed to be easy to integrate with various front-end applications and offers robust authentication using JSON Web Tokens (JWTs) to ensure data security.
 
+## [Link to Front-End Repository](https://github.com/codeWithHyder/house-rent-frontend/pull/34)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
