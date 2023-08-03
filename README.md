@@ -5,7 +5,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Catalog of my things ](#-catalog-of-my-things-)
+- [📖 House Rental API ](#-house-rental-api-)
   - [Kanban board](#kanban-board)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -27,7 +27,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Greeting Rails <a name="about-project"></a>
+# 📖 House Rentaal Api <a name="about-project"></a>
 
 The House Rental API is a web service that enables users to rent houses and manage reservations for those houses. It provides a secure and efficient platform for users to create accounts, log in, view available houses, make reservations, and manage their bookings. The API is designed to be easy to integrate with various front-end applications and offers robust authentication using JSON Web Tokens (JWTs) to ensure data security.
 
